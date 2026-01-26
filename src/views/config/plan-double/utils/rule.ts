@@ -18,20 +18,10 @@ export function getFormRules(): FormRules {
     positiveAccountNum: [
       { required: true, message: "正投账号数量为必填项", trigger: "blur" }
     ],
-    reverseAccountNum: [
-      { required: true, message: "反投账号数量为必填项", trigger: "blur" }
-    ],
     positiveAmount: [
       {
         required: true,
         message: "正投金额为必填项",
-        trigger: "blur"
-      }
-    ],
-    reverseAmount: [
-      {
-        required: true,
-        message: "反投金额为必填项",
         trigger: "blur"
       }
     ]

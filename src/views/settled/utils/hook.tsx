@@ -27,8 +27,7 @@ export function useUser(tableRef: Ref, treeRef: Ref) {
     positions: "",
     positiveNum: "",
     reverseNum: "",
-    positiveAmount: "",
-    reverseAmount: ""
+    positiveAmount: ""
   });
   const dataList = ref([]);
   const loading = ref(true);
@@ -74,6 +73,11 @@ export function useUser(tableRef: Ref, treeRef: Ref) {
     {
       label: "玩法",
       prop: "play",
+      minWidth: 120
+    },
+    {
+      label: "注单明细",
+      prop: "detail",
       minWidth: 120
     },
     {

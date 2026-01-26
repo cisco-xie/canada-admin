@@ -25,9 +25,7 @@ const props = withDefaults(defineProps<FormProps>(), {
     twoSidedDsNum: 10,
     twoSidedLhNum: 5,
     positiveAccountNum: 0,
-    reverseAccountNum: 0,
-    positiveAmount: 0,
-    reverseAmount: 0
+    positiveAmount: 0
   })
 });
 
@@ -86,21 +84,6 @@ newFormInline.value.twoSidedDsPositions =
   newFormInline.value.twoSidedDsPositions.map(pos => String(pos));
 newFormInline.value.twoSidedLhPositions =
   newFormInline.value.twoSidedLhPositions.map(pos => String(pos));
-
-// 监听 positiveNum 自动计算 reverseNum
-watch(
-  () => newFormInline.value.positiveNum,
-  newVal => {
-    newFormInline.value.reverseNum = Math.max(0, 10 - newVal);
-  }
-);
-// 监听 positiveAmount 自动计算 reverseAmount
-watch(
-  () => newFormInline.value.positiveAmount,
-  newVal => {
-    newFormInline.value.reverseAmount = newVal;
-  }
-);
 
 // 监听 planType，当选择随机方案时，修改相应字段并禁用
 watch(
@@ -391,36 +374,12 @@ defineExpose({ getRef });
         </el-form-item>
       </re-col>
 
-      <!-- 反投金额 -->
-      <re-col :value="12" :xs="24" :sm="24">
-        <el-form-item label="反投金额" prop="reverseAmount">
-          <el-input-number
-            v-model="newFormInline.reverseAmount"
-            :min="1"
-            :step="1"
-            placeholder="请输入反投金额"
-            class="w-full"
-          />
-        </el-form-item>
-      </re-col>
-
       <re-col :value="12" :xs="24" :sm="24">
         <el-form-item label="正投账号数量" prop="positiveAccountNum">
           <el-input-number
             v-model="newFormInline.positiveAccountNum"
             :min="1"
             placeholder="正投账号数量"
-            class="w-full"
-          />
-        </el-form-item>
-      </re-col>
-
-      <re-col :value="12" :xs="24" :sm="24">
-        <el-form-item label="反投账号数量" prop="reverseAccountNum">
-          <el-input-number
-            v-model="newFormInline.reverseAccountNum"
-            :min="1"
-            placeholder="反投账号数量"
             class="w-full"
           />
         </el-form-item>

@@ -40,9 +40,7 @@ const props = withDefaults(defineProps<FormProps>(), {
     twoSidedDsNum: 10,
     twoSidedLhNum: 5,
     positiveAccountNum: 0,
-    reverseAccountNum: 0,
-    positiveAmount: 0,
-    reverseAmount: 0
+    positiveAmount: 0
   })
 });
 

@@ -46,9 +46,7 @@ const props = withDefaults(defineProps<FormProps>(), {
     twoSidedDsNum: 10,
     twoSidedLhNum: 5,
     positiveAccountNum: 0,
-    reverseAccountNum: 0,
-    positiveAmount: 0,
-    reverseAmount: 0
+    positiveAmount: 0
   })
 });
 
@@ -115,13 +113,6 @@ const planComponent = computed(() => {
   }
 });
 
-// 监听 positiveAmount 自动计算 reverseAmount
-watch(
-  () => newFormInline.value.positiveAmount,
-  newVal => {
-    newFormInline.value.reverseAmount = newVal;
-  }
-);
 defineExpose({ getRef });
 </script>
 

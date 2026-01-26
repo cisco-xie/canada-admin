@@ -51,8 +51,7 @@ export function useUser(tableRef: Ref, treeRef: Ref) {
     positions: "",
     positiveNum: "",
     reverseNum: "",
-    positiveAmount: "",
-    reverseAmount: ""
+    positiveAmount: ""
   });
   const formRef = ref();
   const dataList = ref([]);
@@ -245,19 +244,9 @@ export function useUser(tableRef: Ref, treeRef: Ref) {
       minWidth: 50
     },
     {
-      label: "反投账号数量",
-      prop: "reverseAccountNum",
-      minWidth: 50
-    },
-    {
       label: "正投金额",
       minWidth: 90,
       prop: "positiveAmount"
-    },
-    {
-      label: "反投金额",
-      minWidth: 90,
-      prop: "reverseAmount"
     },
     {
       label: "操作",
@@ -512,9 +501,7 @@ export function useUser(tableRef: Ref, treeRef: Ref) {
           twoSidedDsNum: row?.twoSidedDsNum ?? 10,
           twoSidedLhNum: row?.twoSidedLhNum ?? 5,
           positiveAccountNum: row?.positiveAccountNum ?? "",
-          reverseAccountNum: row?.reverseAccountNum ?? "",
-          positiveAmount: row?.positiveAmount ?? "",
-          reverseAmount: row?.reverseAmount ?? ""
+          positiveAmount: row?.positiveAmount ?? ""
         }
       },
       width: "46%",

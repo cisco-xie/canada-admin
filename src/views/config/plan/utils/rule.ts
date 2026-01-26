@@ -41,9 +41,6 @@ export function getFormRules(formInline: any): FormRules {
     positiveAccountNum: [
       { required: true, message: "正投账号数量为必填项", trigger: "blur" }
     ],
-    reverseAccountNum: [
-      { required: true, message: "反投账号数量为必填项", trigger: "blur" }
-    ],
     positiveNum: [
       {
         required: true,
@@ -75,25 +72,6 @@ export function getFormRules(formInline: any): FormRules {
             callback(new Error("正投金额不能小于正投个数"));
           } else if (value < formInline.positiveAccountNum) {
             callback(new Error("正投金额不能小于正投账号数"));
-          } else {
-            callback();
-          }
-        },
-        trigger: "blur"
-      }
-    ],
-    reverseAmount: [
-      {
-        required: true,
-        message: "反投金额为必填项",
-        trigger: "blur"
-      },
-      {
-        validator: (rule, value, callback) => {
-          if (value < formInline.reverseNum) {
-            callback(new Error("反投金额不能小于反投个数"));
-          } else if (value < formInline.reverseAccountNum) {
-            callback(new Error("反投金额不能小于反投账号数"));
           } else {
             callback();
           }

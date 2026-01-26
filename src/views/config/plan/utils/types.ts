@@ -19,9 +19,7 @@ interface FormItemProps {
   twoSidedDsNum: number; // 单双随机数量
   twoSidedLhNum: number; // 龙虎随机数量
   positiveAccountNum: number; // 正投账号数量
-  reverseAccountNum: number; // 反投账号数量
   positiveAmount: number; // 正投金额
-  reverseAmount: number; // 反投金额
 }
 
 interface FormProps {
