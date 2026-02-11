@@ -39,17 +39,18 @@ import {
 const modules: Record<string, any> = import.meta.glob(
   [
     "./modules/**/home.ts",
-    "./modules/**/plan.ts",
+    // "./modules/**/plan.ts",
     "./modules/**/plandouble.ts",
     "./modules/**/accounts.ts",
     "./modules/**/settled.ts",
     "./modules/**/unsettled.ts",
-    "./modules/**/history.ts",
+    // "./modules/**/history.ts",
     "./modules/**/users.ts",
     // "./modules/**/agent.ts",
     // "./modules/**/config.ts",
     // "./modules/**/summary.ts",
     "./modules/**/betfailed.ts",
+    "./modules/**/drawStat.ts",
     "!./modules/**/remaining.ts"
   ],
   {

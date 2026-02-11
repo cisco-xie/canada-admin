@@ -60,11 +60,11 @@ const lotteryOptions = [
 
 const planTypeOptions = [
   { value: 1, label: "001 - 号码投注" },
-  { value: 2, label: "002 - 位置开号投注" },
+  { value: 2, label: "002 - 位置开号投注", disabled: true },
   // { value: 3, label: "003 - 灵活开某投某" }, // 此方案翻倍不对，暂不使用
-  { value: 5, label: "005 - 号码追踪" },
-  { value: 17, label: "017 - 冷热号投注" },
-  { value: 25, label: "025 - 开某投某" }
+  { value: 5, label: "005 - 号码追踪", disabled: true },
+  { value: 17, label: "017 - 冷热号投注", disabled: true },
+  { value: 25, label: "025 - 开某投某", disabled: true }
 ];
 
 const doubleTypeOptions = [
@@ -172,6 +172,7 @@ defineExpose({ getRef });
               :key="index"
               :label="item.label"
               :value="item.value"
+              :disabled="item.disabled"
             />
           </el-select>
         </el-form-item>

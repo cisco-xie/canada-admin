@@ -164,6 +164,7 @@ menus:
   pureConfigAccount: 账号配置
   pureConfigPlan: 随机方案配置
   pureConfigPlanDouble: 计划方案配置
+  pureDrawStat: 开奖统计
   pureAdminUser: 系统用户
   pureAgent: 代理报表
   pureWeekHistory: 本周报表
